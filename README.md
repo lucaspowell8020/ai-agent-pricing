@@ -65,9 +65,11 @@ Top-level fields: `verifiedDate`, `verificationCadence`, `verificationMethod`, `
 
 ## How fresh is it?
 
-Verified weekly via an automated script that fetches each vendor's pricing page, extracts prices with an LLM, normalizes units (per-token, per-1k, per-1M — vendors all use different conventions), and flags any drift against the previous run. A human reviews flagged changes before they ship.
+Verified **daily** via an automated audit. Small price changes (under 25% drift on both input and output) are auto-applied and published the same day. Larger changes — re-pricings, model deprecations, tier consolidations — go through a human editorial review before publication.
 
-The exact `verifiedDate` is in the JSON. If it's more than 9 days old, the audit hasn't run — open an issue.
+The exact `verifiedDate` is in the JSON. If it's more than 48 hours old, the audit pipeline has stopped — please [open an issue](https://github.com/lucaspowell8020/ai-agent-pricing/issues).
+
+Vendor pricing pages remain the canonical source. The audit cross-checks against industry catalog aggregators to detect drift, then verifies against vendor pages before publication.
 
 ## License
 

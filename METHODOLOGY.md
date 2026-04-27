@@ -8,22 +8,25 @@ For each model: input price, output price, context window, vendor, tier, and an 
 
 We don't publish: cached-input pricing, batch pricing, fine-tuning prices, image/audio modality pricing. Those are real but they vary too much by use case to compress into one number. If you need them, the vendor's docs are the right source.
 
-## The weekly audit
+## The daily audit
 
-Every week, an automated script:
+Every day, an automated script:
 
-1. Fetches each vendor's pricing page (Anthropic, OpenAI, Google, Together AI, DeepSeek, etc.).
-2. Sends the relevant HTML to a small LLM with a structured-output prompt that returns `rawInputPrice`, `rawOutputPrice`, `rawUnit` per model. Asking for the raw unit (per-token vs. per-1k vs. per-1M) and converting in code is more reliable than asking the LLM to do unit math.
-3. Normalizes everything to USD-per-1M-tokens.
-4. Compares against the previous run. Any drift opens a GitHub issue with a diff.
+1. Cross-references each model's pricing against vendor sources and industry catalog aggregators.
+2. Diffs the result against the values currently in `pricing.json`.
+3. Splits any drift into two buckets:
+   - **Small drift** (under 25% on both input and output, no sign mismatch, non-zero prices) — auto-applied and committed the same day. The dataset's `verifiedDate` advances. The change appears in `pricing.json` within a few minutes of detection.
+   - **Larger drift** — opens a GitHub issue. A human verifies against the vendor page, decides whether to apply, and merges.
 
-A human reviews flagged changes, verifies against the vendor page, and merges. `pricing.json` in this repo is regenerated from the source dataset and pushed.
+The thresholds exist because typical vendor adjustments are 0–20%. A 25%+ change is rare and usually indicates a tier consolidation, model rename, deprecation, or aggregator data error worth a human eye.
 
-## Why a human is in the loop
+## Why a human is still in the loop
 
-Vendors change their pricing pages constantly — new tiers, renamed models, struck-through old prices kept for SEO. A pure-extraction pipeline catches the easy stuff but ships nonsense on edge cases (one early run priced Gemini Pro at $1,250 per million tokens because the page used per-token pricing in scientific notation). The human review step is what makes the data trustworthy.
+Auto-apply handles the routine case — small competitive adjustments, gradual cuts. Vendors also do less routine things: rename models mid-life, consolidate tiers, deprecate older versions, or correct their own pricing-page errors. Those land in the human review queue.
 
-If a price changes and we haven't reviewed it yet, the audit issue stays open and the JSON stays at the previous verified value. The `verifiedDate` field tells you when the dataset was last confirmed end-to-end.
+A few real edge cases the human review has caught: a vendor pricing page accidentally showed per-token pricing in scientific notation (would have flagged $1,250 per million); an aggregator briefly cached an old struck-through SEO price; a model rename that looked like a pricing change because the slug pointed at a different SKU.
+
+If a large change is pending review, the audit issue stays open and the JSON stays at the previous verified value. The `verifiedDate` field tells you when the dataset was last confirmed end-to-end.
 
 ## What "tier" means
 
