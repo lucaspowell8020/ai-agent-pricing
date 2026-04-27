@@ -138,8 +138,7 @@
       "inputPricePerMillion": 0.6,
       "outputPricePerMillion": 2.2,
       "contextWindow": 128000,
-      "tier": "value",
-      "notes": "Formerly Zhipu AI. Competitive Chinese frontier model with strong coding and tool-use benchmarks. Pricing manually verified — z.ai doesn't surface API per-token prices on a scrape-able public page. Re-verify quarterly."
+      "tier": "value"
     },
     {
       "slug": "mistral-large",
