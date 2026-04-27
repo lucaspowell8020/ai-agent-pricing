@@ -1,0 +1,145 @@
+{
+  "$schema": "./pricing.schema.json",
+  "source": "https://agentshortlist.com",
+  "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
+  "verifiedDate": "2026-04-27",
+  "verificationCadence": "weekly",
+  "verificationMethod": "AI-powered extraction from vendor pricing pages, reviewed by human editor before publication.",
+  "license": "CC-BY-4.0",
+  "models": [
+    {
+      "slug": "claude-opus-4-7",
+      "name": "Claude Opus 4.7",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 5,
+      "outputPricePerMillion": 25,
+      "contextWindow": 1000000,
+      "tier": "frontier",
+      "notes": "Best-in-class reasoning. Anthropic cut Opus pricing 66% in early 2026 — now far more accessible than the original launch price."
+    },
+    {
+      "slug": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 3,
+      "outputPricePerMillion": 15,
+      "contextWindow": 1000000,
+      "tier": "balanced",
+      "notes": "The sweet spot. Sonnet handles 90% of agent workflows at 1/5th the cost of Opus."
+    },
+    {
+      "slug": "claude-haiku-4-5",
+      "name": "Claude Haiku 4.5",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 1,
+      "outputPricePerMillion": 5,
+      "contextWindow": 200000,
+      "tier": "value",
+      "notes": "Fast and cheap. Good for high-volume support replies and classification."
+    },
+    {
+      "slug": "gpt-5",
+      "name": "GPT-5.5",
+      "vendor": "OpenAI",
+      "inputPricePerMillion": 5,
+      "outputPricePerMillion": 30,
+      "contextWindow": 400000,
+      "tier": "frontier",
+      "notes": "OpenAI's frontier model as of April 2026. Marketed for coding and professional work."
+    },
+    {
+      "slug": "gpt-5-mini",
+      "name": "GPT-5.4 mini",
+      "vendor": "OpenAI",
+      "inputPricePerMillion": 0.75,
+      "outputPricePerMillion": 4.5,
+      "contextWindow": 128000,
+      "tier": "value"
+    },
+    {
+      "slug": "gemini-2-5-pro",
+      "name": "Gemini 2.5 Pro",
+      "vendor": "Google",
+      "inputPricePerMillion": 1.25,
+      "outputPricePerMillion": 10,
+      "contextWindow": 2000000,
+      "tier": "balanced",
+      "notes": "Pricing shown is for prompts ≤200k tokens. Above that: $2.50 input / $15 output per 1M. 2M context window still the largest on this list. Google also offers Gemini 3.1 Pro Preview at higher prices for early-access workloads."
+    },
+    {
+      "slug": "gemini-2-5-flash",
+      "name": "Gemini 2.5 Flash",
+      "vendor": "Google",
+      "inputPricePerMillion": 0.3,
+      "outputPricePerMillion": 2.5,
+      "contextWindow": 1000000,
+      "tier": "value",
+      "notes": "Hybrid reasoning model with 1M context and thinking budgets. Audio input is $1/M."
+    },
+    {
+      "slug": "gemini-3-1-pro-preview",
+      "name": "Gemini 3.1 Pro Preview",
+      "vendor": "Google",
+      "inputPricePerMillion": 2,
+      "outputPricePerMillion": 12,
+      "contextWindow": 2000000,
+      "tier": "balanced"
+    },
+    {
+      "slug": "gemini-3-1-flash-lite-preview",
+      "name": "Gemini 3.1 Flash-Lite Preview",
+      "vendor": "Google",
+      "inputPricePerMillion": 0.25,
+      "outputPricePerMillion": 1.5,
+      "contextWindow": 1000000,
+      "tier": "value"
+    },
+    {
+      "slug": "llama-3-3-70b",
+      "name": "Llama 3.3 70B (Together AI)",
+      "vendor": "Meta / Together AI",
+      "inputPricePerMillion": 0.88,
+      "outputPricePerMillion": 0.88,
+      "contextWindow": 128000,
+      "tier": "value"
+    },
+    {
+      "slug": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "vendor": "DeepSeek",
+      "inputPricePerMillion": 0.14,
+      "outputPricePerMillion": 0.28,
+      "contextWindow": 128000,
+      "tier": "value",
+      "notes": "DeepSeek V3 was deprecated in favour of V4 (Flash and Pro variants). V4 Flash is the value tier — cache-hit pricing drops input to $0.0028/M for repeat queries. Aider users mix this in for cost-heavy workflows."
+    },
+    {
+      "slug": "kimi-k2",
+      "name": "Kimi K2",
+      "vendor": "Moonshot AI",
+      "inputPricePerMillion": 0.6,
+      "outputPricePerMillion": 2.5,
+      "contextWindow": 200000,
+      "tier": "value"
+    },
+    {
+      "slug": "glm-4-6",
+      "name": "GLM-4.6",
+      "vendor": "z.ai",
+      "inputPricePerMillion": 0.6,
+      "outputPricePerMillion": 2.2,
+      "contextWindow": 128000,
+      "tier": "value",
+      "notes": "Formerly Zhipu AI. Competitive Chinese frontier model with strong coding and tool-use benchmarks. Pricing manually verified — z.ai doesn't surface API per-token prices on a scrape-able public page. Re-verify quarterly."
+    },
+    {
+      "slug": "mistral-large",
+      "name": "Mistral Large 2.1",
+      "vendor": "Mistral",
+      "inputPricePerMillion": 2,
+      "outputPricePerMillion": 6,
+      "contextWindow": 128000,
+      "tier": "balanced"
+    }
+  ]
+}

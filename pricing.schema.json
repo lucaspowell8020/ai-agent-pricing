@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/lucaspowell8020/ai-agent-pricing/main/pricing.schema.json",
+  "title": "AI Agent Pricing Dataset",
+  "description": "Frontier AI model pricing, verified weekly. Source: https://agentshortlist.com",
+  "type": "object",
+  "required": [
+    "verifiedDate",
+    "verificationCadence",
+    "verificationMethod",
+    "license",
+    "models"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "source": { "type": "string", "format": "uri" },
+    "sourceRepo": { "type": "string", "format": "uri" },
+    "verifiedDate": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date when the dataset was last verified end-to-end."
+    },
+    "verificationCadence": {
+      "type": "string",
+      "description": "How often the dataset is re-verified."
+    },
+    "verificationMethod": { "type": "string" },
+    "license": { "type": "string" },
+    "models": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/model" }
+    }
+  },
+  "$defs": {
+    "model": {
+      "type": "object",
+      "required": [
+        "slug",
+        "name",
+        "vendor",
+        "inputPricePerMillion",
+        "outputPricePerMillion",
+        "contextWindow",
+        "tier"
+      ],
+      "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Stable identifier. Won't change once published."
+        },
+        "name": { "type": "string" },
+        "vendor": { "type": "string" },
+        "inputPricePerMillion": {
+          "type": "number",
+          "minimum": 0,
+          "description": "USD per 1M input tokens."
+        },
+        "outputPricePerMillion": {
+          "type": "number",
+          "minimum": 0,
+          "description": "USD per 1M output tokens."
+        },
+        "contextWindow": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Max context window in tokens."
+        },
+        "tier": {
+          "type": "string",
+          "enum": ["frontier", "balanced", "value", "open"]
+        },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}
