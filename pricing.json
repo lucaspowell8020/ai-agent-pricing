@@ -3,8 +3,8 @@
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
   "verifiedDate": "2026-04-27",
-  "verificationCadence": "weekly",
-  "verificationMethod": "AI-powered extraction from vendor pricing pages, reviewed by human editor before publication.",
+  "verificationCadence": "daily",
+  "verificationMethod": "Pricing is verified daily against vendor sources. Small drift (under 25% on input and output) is auto-applied; larger changes are reviewed by a human editor before publication. Vendor pricing pages are the canonical source of truth.",
   "license": "CC-BY-4.0",
   "models": [
     {
