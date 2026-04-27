@@ -149,7 +149,8 @@
       "inputPricePerMillion": 0.57,
       "outputPricePerMillion": 2.3,
       "contextWindow": 200000,
-      "tier": "value"
+      "tier": "value",
+      "notes": "Moonshot AI's frontier model. Strong on long-context work. Verify pricing at platform.moonshot.ai before committing budget — Moonshot's page changes format frequently."
     },
     {
       "slug": "glm-4-6",
@@ -158,7 +159,8 @@
       "inputPricePerMillion": 0.6,
       "outputPricePerMillion": 2.2,
       "contextWindow": 128000,
-      "tier": "value"
+      "tier": "value",
+      "notes": "Formerly Zhipu AI. Competitive Chinese frontier model with strong coding and tool-use benchmarks. Pricing verified directly against docs.z.ai/guides/overview/pricing. Aggregator sources sometimes show different rates that don't reflect z.ai's own API pricing — verify at the vendor page."
     },
     {
       "slug": "mistral-large",
