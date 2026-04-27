@@ -126,8 +126,8 @@
       "slug": "kimi-k2",
       "name": "Kimi K2",
       "vendor": "Moonshot AI",
-      "inputPricePerMillion": 0.6,
-      "outputPricePerMillion": 2.5,
+      "inputPricePerMillion": 0.57,
+      "outputPricePerMillion": 2.3,
       "contextWindow": 200000,
       "tier": "value"
     },
