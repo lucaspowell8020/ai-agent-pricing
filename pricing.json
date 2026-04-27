@@ -63,7 +63,27 @@
       "inputPricePerMillion": 2,
       "outputPricePerMillion": 6,
       "contextWindow": 2000000,
-      "tier": "frontier"
+      "tier": "frontier",
+      "notes": "xAI's current flagship as of mid-2026. Cheaper than Sonnet 4.6 with 2M context and deep integration into X data and live web access. Replaced Grok 4 on the docs.x.ai pricing page."
+    },
+    {
+      "slug": "grok-4",
+      "name": "Grok 4",
+      "vendor": "xAI",
+      "inputPricePerMillion": 3,
+      "outputPricePerMillion": 15,
+      "contextWindow": 256000,
+      "tier": "frontier",
+      "notes": "xAI's previous flagship. Still available on the API but no longer featured on the docs.x.ai pricing page — most builders should default to Grok 4.20 or Grok 4 Fast unless they have a specific reason to pin to this version."
+    },
+    {
+      "slug": "grok-4-fast",
+      "name": "Grok 4 Fast",
+      "vendor": "xAI",
+      "inputPricePerMillion": 0.2,
+      "outputPricePerMillion": 0.5,
+      "contextWindow": 2000000,
+      "tier": "value"
     },
     {
       "slug": "gemini-2-5-pro",
