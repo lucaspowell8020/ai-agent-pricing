@@ -57,6 +57,15 @@
       "tier": "value"
     },
     {
+      "slug": "grok-4",
+      "name": "Grok 4",
+      "vendor": "xAI",
+      "inputPricePerMillion": 3,
+      "outputPricePerMillion": 15,
+      "contextWindow": 256000,
+      "tier": "frontier"
+    },
+    {
       "slug": "gemini-2-5-pro",
       "name": "Gemini 2.5 Pro",
       "vendor": "Google",
