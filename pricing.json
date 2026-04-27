@@ -15,7 +15,7 @@
       "outputPricePerMillion": 25,
       "contextWindow": 1000000,
       "tier": "frontier",
-      "notes": "Best-in-class reasoning. Anthropic cut Opus pricing 66% in early 2026 — now far more accessible than the original launch price."
+      "notes": "Best-in-class reasoning. Anthropic's flagship for the hardest agentic decisions."
     },
     {
       "slug": "claude-sonnet-4-6",
@@ -25,7 +25,7 @@
       "outputPricePerMillion": 15,
       "contextWindow": 1000000,
       "tier": "balanced",
-      "notes": "The sweet spot. Sonnet handles 90% of agent workflows at 1/5th the cost of Opus."
+      "notes": "The sweet spot. Handles ~90% of agent workflows at a fraction of Opus pricing."
     },
     {
       "slug": "claude-haiku-4-5",
@@ -35,7 +35,7 @@
       "outputPricePerMillion": 5,
       "contextWindow": 200000,
       "tier": "value",
-      "notes": "Fast and cheap. Good for high-volume support replies and classification."
+      "notes": "Fast and cheap. Best for high-volume classification and short replies."
     },
     {
       "slug": "gpt-5",
@@ -45,7 +45,7 @@
       "outputPricePerMillion": 30,
       "contextWindow": 400000,
       "tier": "frontier",
-      "notes": "OpenAI's frontier model as of April 2026. Marketed for coding and professional work."
+      "notes": "OpenAI's frontier line. Marketed for coding and professional work."
     },
     {
       "slug": "gpt-5-mini",
@@ -64,7 +64,7 @@
       "outputPricePerMillion": 6,
       "contextWindow": 2000000,
       "tier": "frontier",
-      "notes": "xAI's current flagship as of mid-2026. Cheaper than Sonnet 4.6 with 2M context and deep integration into X data and live web access. Replaced Grok 4 on the docs.x.ai pricing page."
+      "notes": "xAI's current flagship. 2M context with live web access via X integration."
     },
     {
       "slug": "grok-4",
@@ -74,7 +74,7 @@
       "outputPricePerMillion": 15,
       "contextWindow": 256000,
       "tier": "frontier",
-      "notes": "xAI's previous flagship. Still available on the API but no longer featured on the docs.x.ai pricing page — most builders should default to Grok 4.20 or Grok 4 Fast unless they have a specific reason to pin to this version."
+      "notes": "xAI's previous flagship. Still available; most builders should default to Grok 4.20."
     },
     {
       "slug": "grok-4-fast",
@@ -83,7 +83,8 @@
       "inputPricePerMillion": 0.2,
       "outputPricePerMillion": 0.5,
       "contextWindow": 2000000,
-      "tier": "value"
+      "tier": "value",
+      "notes": "xAI's value tier. 10× cheaper than Grok 4.20 with the same 2M context."
     },
     {
       "slug": "gemini-2-5-pro",
@@ -93,7 +94,7 @@
       "outputPricePerMillion": 10,
       "contextWindow": 2000000,
       "tier": "balanced",
-      "notes": "Pricing shown is for prompts ≤200k tokens. Above that: $2.50 input / $15 output per 1M. 2M context window still the largest on this list. Google also offers Gemini 3.1 Pro Preview at higher prices for early-access workloads."
+      "notes": "Largest context window on the list. Pricing shown is for prompts ≤200k tokens; rises to $2.50/$15 above that."
     },
     {
       "slug": "gemini-2-5-flash",
@@ -103,7 +104,7 @@
       "outputPricePerMillion": 2.5,
       "contextWindow": 1000000,
       "tier": "value",
-      "notes": "Hybrid reasoning model with 1M context and thinking budgets. Audio input is $1/M."
+      "notes": "Hybrid reasoning model with 1M context and tunable thinking budgets."
     },
     {
       "slug": "gemini-3-1-pro-preview",
@@ -121,7 +122,8 @@
       "inputPricePerMillion": 0.25,
       "outputPricePerMillion": 1.5,
       "contextWindow": 1000000,
-      "tier": "value"
+      "tier": "value",
+      "notes": "Google's most cost-efficient model. Optimised for high-volume agentic tasks and simple data processing."
     },
     {
       "slug": "llama-3-3-70b",
@@ -130,7 +132,8 @@
       "inputPricePerMillion": 0.88,
       "outputPricePerMillion": 0.88,
       "contextWindow": 128000,
-      "tier": "value"
+      "tier": "value",
+      "notes": "Open weights. The price shown reflects Together AI; other inference providers host the same weights at different rates."
     },
     {
       "slug": "deepseek-v4-flash",
@@ -140,7 +143,7 @@
       "outputPricePerMillion": 0.28,
       "contextWindow": 128000,
       "tier": "value",
-      "notes": "DeepSeek V3 was deprecated in favour of V4 (Flash and Pro variants). V4 Flash is the value tier — cache-hit pricing drops input to $0.0028/M for repeat queries. Aider users mix this in for cost-heavy workflows."
+      "notes": "DeepSeek's value tier. Cache-hit pricing drops input to $0.0028/M on repeat queries."
     },
     {
       "slug": "kimi-k2",
@@ -150,7 +153,7 @@
       "outputPricePerMillion": 2.3,
       "contextWindow": 200000,
       "tier": "value",
-      "notes": "Moonshot AI's frontier model. Strong on long-context work. Verify pricing at platform.moonshot.ai before committing budget — Moonshot's page changes format frequently."
+      "notes": "Moonshot AI's frontier model. Strong on long-context work."
     },
     {
       "slug": "glm-4-6",
@@ -160,7 +163,7 @@
       "outputPricePerMillion": 2.2,
       "contextWindow": 128000,
       "tier": "value",
-      "notes": "Formerly Zhipu AI. Competitive Chinese frontier model with strong coding and tool-use benchmarks. Pricing verified directly against docs.z.ai/guides/overview/pricing. Aggregator sources sometimes show different rates that don't reflect z.ai's own API pricing — verify at the vendor page."
+      "notes": "Formerly Zhipu AI. Competitive Chinese frontier model with strong coding and tool-use benchmarks."
     },
     {
       "slug": "mistral-large",
@@ -169,7 +172,8 @@
       "inputPricePerMillion": 2,
       "outputPricePerMillion": 6,
       "contextWindow": 128000,
-      "tier": "balanced"
+      "tier": "balanced",
+      "notes": "European frontier model. Stronger data residency story than US providers — useful for EU compliance-heavy workflows."
     }
   ]
 }
