@@ -2,7 +2,7 @@
   "$schema": "./pricing.schema.json",
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
-  "verifiedDate": "2026-04-27",
+  "verifiedDate": "2026-04-29",
   "verificationCadence": "daily",
   "verificationMethod": "Pricing is verified daily against vendor sources. Small drift (under 25% on input and output) is auto-applied; larger changes are reviewed by a human editor before publication. Vendor pricing pages are the canonical source of truth.",
   "license": "CC-BY-4.0",
@@ -48,6 +48,16 @@
       "notes": "OpenAI's frontier line. Marketed for coding and professional work."
     },
     {
+      "slug": "gpt-5-4",
+      "name": "GPT-5.4",
+      "vendor": "OpenAI",
+      "inputPricePerMillion": 2.5,
+      "outputPricePerMillion": 15,
+      "contextWindow": 1050000,
+      "tier": "balanced",
+      "notes": "The full GPT-5.4 — not the mini. Comparable pricing to Claude Sonnet with OpenAI's tool-use and computer-use stack."
+    },
+    {
       "slug": "gpt-5-mini",
       "name": "GPT-5.4 mini",
       "vendor": "OpenAI",
@@ -77,14 +87,13 @@
       "notes": "xAI's previous flagship. Still available; most builders should default to Grok 4.20."
     },
     {
-      "slug": "grok-4-fast",
-      "name": "Grok 4 Fast",
+      "slug": "grok-4-1-fast",
+      "name": "Grok 4.1 Fast",
       "vendor": "xAI",
       "inputPricePerMillion": 0.2,
       "outputPricePerMillion": 0.5,
       "contextWindow": 2000000,
-      "tier": "value",
-      "notes": "xAI's value tier. 10× cheaper than Grok 4.20 with the same 2M context."
+      "tier": "value"
     },
     {
       "slug": "gemini-2-5-pro",
@@ -114,6 +123,16 @@
       "outputPricePerMillion": 12,
       "contextWindow": 2000000,
       "tier": "balanced"
+    },
+    {
+      "slug": "gemini-3-flash-preview",
+      "name": "Gemini 3 Flash Preview",
+      "vendor": "Google",
+      "inputPricePerMillion": 0.5,
+      "outputPricePerMillion": 3,
+      "contextWindow": 1000000,
+      "tier": "balanced",
+      "notes": "Google's high-speed thinking model for agentic workflows. Strong on coding and multi-turn chat. #5 on OpenRouter this week."
     },
     {
       "slug": "gemini-3-1-flash-lite-preview",
@@ -146,24 +165,34 @@
       "notes": "DeepSeek's value tier. Cache-hit pricing drops input to $0.0028/M on repeat queries."
     },
     {
-      "slug": "kimi-k2",
-      "name": "Kimi K2",
-      "vendor": "Moonshot AI",
-      "inputPricePerMillion": 0.57,
-      "outputPricePerMillion": 2.3,
-      "contextWindow": 200000,
+      "slug": "deepseek-v3-2",
+      "name": "DeepSeek V3.2",
+      "vendor": "DeepSeek",
+      "inputPricePerMillion": 0.252,
+      "outputPricePerMillion": 0.378,
+      "contextWindow": 131000,
       "tier": "value",
-      "notes": "Moonshot AI's frontier model. Strong on long-context work."
+      "notes": "DeepSeek's capable open-weight model. Extraordinary value — frontier-class performance at $0.25/M input. #3 on OpenRouter this week."
     },
     {
-      "slug": "glm-4-6",
-      "name": "GLM-4.6",
+      "slug": "kimi-k2-6",
+      "name": "Kimi K2.6",
+      "vendor": "Moonshot AI",
+      "inputPricePerMillion": 0.7448,
+      "outputPricePerMillion": 4.655,
+      "contextWindow": 256000,
+      "tier": "balanced",
+      "notes": "Moonshot AI's current flagship — 841% week-on-week growth on OpenRouter. Strong on long-context and agentic work."
+    },
+    {
+      "slug": "glm-5-1",
+      "name": "GLM 5.1",
       "vendor": "z.ai",
-      "inputPricePerMillion": 0.6,
-      "outputPricePerMillion": 2.2,
-      "contextWindow": 128000,
-      "tier": "value",
-      "notes": "Formerly Zhipu AI. Competitive Chinese frontier model with strong coding and tool-use benchmarks."
+      "inputPricePerMillion": 1.05,
+      "outputPricePerMillion": 3.5,
+      "contextWindow": 202000,
+      "tier": "balanced",
+      "notes": "Successor to GLM-4.6. z.ai's current flagship with improved reasoning and tool-use benchmarks."
     },
     {
       "slug": "mistral-large",
