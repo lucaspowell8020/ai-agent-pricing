@@ -2,7 +2,7 @@
   "$schema": "./pricing.schema.json",
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
-  "verifiedDate": "2026-06-02",
+  "verifiedDate": "2026-06-09",
   "verificationCadence": "daily",
   "verificationMethod": "Pricing is verified daily against vendor sources. Small drift (under 25% on input and output) is auto-applied; larger changes are reviewed by a human editor before publication. Vendor pricing pages are the canonical source of truth.",
   "license": "CC-BY-4.0",
@@ -70,30 +70,10 @@
       "slug": "grok-4-20",
       "name": "Grok 4.20",
       "vendor": "xAI",
-      "inputPricePerMillion": 2,
-      "outputPricePerMillion": 6,
+      "inputPricePerMillion": 1.25,
+      "outputPricePerMillion": 2.5,
       "contextWindow": 2000000,
-      "tier": "frontier",
-      "notes": "xAI's current flagship. 2M context with live web access via X integration."
-    },
-    {
-      "slug": "grok-4",
-      "name": "Grok 4",
-      "vendor": "xAI",
-      "inputPricePerMillion": 3,
-      "outputPricePerMillion": 15,
-      "contextWindow": 256000,
-      "tier": "frontier",
-      "notes": "xAI's previous flagship. Still available; most builders should default to Grok 4.20."
-    },
-    {
-      "slug": "grok-4-1-fast",
-      "name": "Grok 4.1 Fast",
-      "vendor": "xAI",
-      "inputPricePerMillion": 0.2,
-      "outputPricePerMillion": 0.5,
-      "contextWindow": 2000000,
-      "tier": "value"
+      "tier": "frontier"
     },
     {
       "slug": "gemini-2-5-pro",
@@ -178,8 +158,8 @@
       "slug": "kimi-k2-6",
       "name": "Kimi K2.6",
       "vendor": "Moonshot AI",
-      "inputPricePerMillion": 0.7448,
-      "outputPricePerMillion": 4.655,
+      "inputPricePerMillion": 0.68,
+      "outputPricePerMillion": 3.41,
       "contextWindow": 256000,
       "tier": "balanced",
       "notes": "Moonshot AI's current flagship — 841% week-on-week growth on OpenRouter. Strong on long-context and agentic work."
@@ -188,8 +168,8 @@
       "slug": "glm-5-1",
       "name": "GLM 5.1",
       "vendor": "z.ai",
-      "inputPricePerMillion": 1.05,
-      "outputPricePerMillion": 3.5,
+      "inputPricePerMillion": 0.98,
+      "outputPricePerMillion": 3.08,
       "contextWindow": 202000,
       "tier": "balanced",
       "notes": "Successor to GLM-4.6. z.ai's current flagship with improved reasoning and tool-use benchmarks."
