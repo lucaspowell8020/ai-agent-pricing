@@ -8,6 +8,36 @@
   "license": "CC-BY-4.0",
   "models": [
     {
+      "slug": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 10,
+      "outputPricePerMillion": 50,
+      "contextWindow": 1000000,
+      "tier": "frontier",
+      "notes": "Anthropic's newest premium-tier model. Priced 2x above Opus 4.8 — positioned for the hardest reasoning workloads where the cost is worth the quality bump."
+    },
+    {
+      "slug": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 5,
+      "outputPricePerMillion": 25,
+      "contextWindow": 1000000,
+      "tier": "frontier",
+      "notes": "Anthropic's current flagship — succeeded Opus 4.7. Same pricing as the prior generation. Best-in-class reasoning for the hardest agentic decisions."
+    },
+    {
+      "slug": "claude-opus-4-8-fast",
+      "name": "Claude Opus 4.8 Fast",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 10,
+      "outputPricePerMillion": 50,
+      "contextWindow": 1000000,
+      "tier": "frontier",
+      "notes": "Low-latency variant of Opus 4.8 — 2x the price for guaranteed throughput and faster time-to-first-token. Right pick for production agentic loops where latency matters."
+    },
+    {
       "slug": "claude-opus-4-7",
       "name": "Claude Opus 4.7",
       "vendor": "Anthropic",
@@ -15,7 +45,7 @@
       "outputPricePerMillion": 25,
       "contextWindow": 1000000,
       "tier": "frontier",
-      "notes": "Best-in-class reasoning. Anthropic's flagship for the hardest agentic decisions."
+      "notes": "Previous flagship — superseded by Opus 4.8 (2026-05-27) at the same price. Still accessible via API for backwards compatibility."
     },
     {
       "slug": "claude-sonnet-4-6",
@@ -173,14 +203,32 @@
       "notes": "DeepSeek's capable open-weight model. Extraordinary value — frontier-class performance at $0.25/M input. #3 on OpenRouter this week."
     },
     {
+      "slug": "kimi-k2-7-code",
+      "name": "Kimi K2.7 Code",
+      "vendor": "Moonshot AI",
+      "inputPricePerMillion": 0.74,
+      "outputPricePerMillion": 3.5,
+      "contextWindow": 262000,
+      "tier": "value"
+    },
+    {
       "slug": "kimi-k2-6",
       "name": "Kimi K2.6",
       "vendor": "Moonshot AI",
       "inputPricePerMillion": 0.68,
       "outputPricePerMillion": 3.41,
       "contextWindow": 256000,
+      "tier": "balanced"
+    },
+    {
+      "slug": "glm-5-2",
+      "name": "GLM 5.2",
+      "vendor": "z.ai",
+      "inputPricePerMillion": 1.4,
+      "outputPricePerMillion": 4.4,
+      "contextWindow": 1048000,
       "tier": "balanced",
-      "notes": "Moonshot AI's current flagship — 841% week-on-week growth on OpenRouter. Strong on long-context and agentic work."
+      "notes": "z.ai's current flagship — successor to GLM 5.1. ~50% price bump from 5.1 traded for 5x context (1M tokens) and stronger reasoning/tool-use benchmarks."
     },
     {
       "slug": "glm-5-1",
@@ -190,7 +238,7 @@
       "outputPricePerMillion": 3.08,
       "contextWindow": 202000,
       "tier": "balanced",
-      "notes": "Successor to GLM-4.6. z.ai's current flagship with improved reasoning and tool-use benchmarks."
+      "notes": "Previous z.ai flagship — superseded by GLM 5.2 (2026-06-16). Still available; cheaper than 5.2 if 200k context is enough."
     },
     {
       "slug": "mistral-large",
