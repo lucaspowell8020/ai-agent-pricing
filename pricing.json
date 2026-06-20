@@ -2,7 +2,7 @@
   "$schema": "./pricing.schema.json",
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
-  "verifiedDate": "2026-06-19",
+  "verifiedDate": "2026-06-20",
   "verificationCadence": "daily",
   "verificationMethod": "Pricing is verified daily against vendor sources. Small drift (under 25% on input and output) is auto-applied; larger changes are reviewed by a human editor before publication. Vendor pricing pages are the canonical source of truth.",
   "license": "CC-BY-4.0",
@@ -206,8 +206,8 @@
       "slug": "kimi-k2-7-code",
       "name": "Kimi K2.7 Code",
       "vendor": "Moonshot AI",
-      "inputPricePerMillion": 0.74,
-      "outputPricePerMillion": 3.5,
+      "inputPricePerMillion": 0.612,
+      "outputPricePerMillion": 3.069,
       "contextWindow": 262000,
       "tier": "value"
     },
@@ -215,7 +215,7 @@
       "slug": "kimi-k2-6",
       "name": "Kimi K2.6",
       "vendor": "Moonshot AI",
-      "inputPricePerMillion": 0.67,
+      "inputPricePerMillion": 0.66,
       "outputPricePerMillion": 3.5,
       "contextWindow": 256000,
       "tier": "balanced"
