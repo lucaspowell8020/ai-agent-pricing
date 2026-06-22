@@ -2,7 +2,7 @@
   "$schema": "./pricing.schema.json",
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
-  "verifiedDate": "2026-06-20",
+  "verifiedDate": "2026-06-22",
   "verificationCadence": "daily",
   "verificationMethod": "Pricing is verified daily against vendor sources. Small drift (under 25% on input and output) is auto-applied; larger changes are reviewed by a human editor before publication. Vendor pricing pages are the canonical source of truth.",
   "license": "CC-BY-4.0",
@@ -216,7 +216,7 @@
       "name": "Kimi K2.6",
       "vendor": "Moonshot AI",
       "inputPricePerMillion": 0.66,
-      "outputPricePerMillion": 3.5,
+      "outputPricePerMillion": 3.41,
       "contextWindow": 256000,
       "tier": "balanced"
     },
@@ -224,8 +224,8 @@
       "slug": "glm-5-2",
       "name": "GLM 5.2",
       "vendor": "z.ai",
-      "inputPricePerMillion": 1.2,
-      "outputPricePerMillion": 4.1,
+      "inputPricePerMillion": 1,
+      "outputPricePerMillion": 4,
       "contextWindow": 1048000,
       "tier": "balanced",
       "notes": "z.ai's current flagship — successor to GLM 5.1. ~50% price bump from 5.1 traded for 5x context (1M tokens) and stronger reasoning/tool-use benchmarks."
