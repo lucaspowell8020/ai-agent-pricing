@@ -160,7 +160,7 @@
       "outputPricePerMillion": 3,
       "contextWindow": 1000000,
       "tier": "balanced",
-      "notes": "Google's high-speed thinking model for agentic workflows. Strong on coding and multi-turn chat. #5 on OpenRouter this week."
+      "notes": "Google's high-speed thinking model for agentic workflows. Strong on coding and multi-turn chat. Top 5 on public model marketplaces this week."
     },
     {
       "slug": "gemini-3-1-flash-lite-preview",
@@ -200,7 +200,7 @@
       "outputPricePerMillion": 0.3432,
       "contextWindow": 131000,
       "tier": "value",
-      "notes": "DeepSeek's capable open-weight model. Extraordinary value — frontier-class performance at $0.25/M input. #3 on OpenRouter this week."
+      "notes": "DeepSeek's capable open-weight model. Extraordinary value — frontier-class performance at $0.25/M input. Top 3 on public model marketplaces this week."
     },
     {
       "slug": "kimi-k2-7-code",
