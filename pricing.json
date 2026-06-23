@@ -206,8 +206,8 @@
       "slug": "kimi-k2-7-code",
       "name": "Kimi K2.7 Code",
       "vendor": "Moonshot AI",
-      "inputPricePerMillion": 0.612,
-      "outputPricePerMillion": 3.069,
+      "inputPricePerMillion": 0.68,
+      "outputPricePerMillion": 3.41,
       "contextWindow": 262000,
       "tier": "value"
     },
