@@ -97,6 +97,25 @@
       "tier": "value"
     },
     {
+      "slug": "gpt-5-nano",
+      "name": "GPT-5.4 nano",
+      "vendor": "OpenAI",
+      "inputPricePerMillion": 0.2,
+      "outputPricePerMillion": 1.25,
+      "contextWindow": 128000,
+      "tier": "value"
+    },
+    {
+      "slug": "gpt-5-3-codex",
+      "name": "GPT-5.3 Codex",
+      "vendor": "OpenAI",
+      "inputPricePerMillion": 1.75,
+      "outputPricePerMillion": 14,
+      "contextWindow": 400000,
+      "tier": "balanced",
+      "notes": "OpenAI's coding-specific model — powers the Codex CLI and ChatGPT cloud-runner agent. Tuned for software engineering tasks; competitive with Claude Sonnet on coding-only benchmarks at lower input cost."
+    },
+    {
       "slug": "grok-4-3",
       "name": "Grok 4.3",
       "vendor": "xAI",
