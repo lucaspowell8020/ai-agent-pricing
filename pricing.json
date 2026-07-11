@@ -2,7 +2,7 @@
   "$schema": "./pricing.schema.json",
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
-  "verifiedDate": "2026-07-10",
+  "verifiedDate": "2026-07-11",
   "verificationCadence": "daily",
   "verificationMethod": "Pricing is verified daily against vendor sources. Small drift (under 25% on input and output) is auto-applied; larger changes are reviewed by a human editor before publication. Vendor pricing pages are the canonical source of truth.",
   "license": "CC-BY-4.0",
@@ -205,8 +205,8 @@
       "slug": "deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
       "vendor": "DeepSeek",
-      "inputPricePerMillion": 0.089,
-      "outputPricePerMillion": 0.18,
+      "inputPricePerMillion": 0.077,
+      "outputPricePerMillion": 0.154,
       "contextWindow": 128000,
       "tier": "value",
       "notes": "DeepSeek's value tier. Cache-hit pricing drops input to $0.0028/M on repeat queries."
@@ -226,7 +226,7 @@
       "name": "Kimi K2.7 Code",
       "vendor": "Moonshot AI",
       "inputPricePerMillion": 0.72,
-      "outputPricePerMillion": 3.49,
+      "outputPricePerMillion": 3.5,
       "contextWindow": 262000,
       "tier": "value"
     },
