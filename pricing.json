@@ -116,6 +116,15 @@
       "notes": "OpenAI's coding-specific model — powers the Codex CLI and ChatGPT cloud-runner agent. Tuned for software engineering tasks; competitive with Claude Sonnet on coding-only benchmarks at lower input cost."
     },
     {
+      "slug": "grok-4-5",
+      "name": "Grok 4.5",
+      "vendor": "xAI",
+      "inputPricePerMillion": 2,
+      "outputPricePerMillion": 6,
+      "contextWindow": 500000,
+      "tier": "frontier"
+    },
+    {
       "slug": "grok-4-3",
       "name": "Grok 4.3",
       "vendor": "xAI",
