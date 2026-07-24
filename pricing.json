@@ -14,8 +14,37 @@
       "inputPricePerMillion": 10,
       "outputPricePerMillion": 50,
       "contextWindow": 1000000,
+      "tier": "frontier"
+    },
+    {
+      "slug": "claude-mythos-5",
+      "name": "Claude Mythos 5",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 10,
+      "outputPricePerMillion": 50,
+      "contextWindow": 1000000,
       "tier": "frontier",
-      "notes": "Anthropic's newest premium-tier model. Priced 2x above Opus 4.8 — positioned for the hardest reasoning workloads where the cost is worth the quality bump."
+      "notes": "Limited-availability frontier model (Glasswing program). Same pricing as Fable 5. Not generally accessible — access via Anthropic's Glasswing program."
+    },
+    {
+      "slug": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 5,
+      "outputPricePerMillion": 25,
+      "contextWindow": 1000000,
+      "tier": "frontier",
+      "notes": "Anthropic's current flagship reasoning model. Same $5/$25 pricing as the entire Opus 4.x line — no price bump for the generation upgrade. Best pick for the hardest agentic decisions where reasoning quality compounds."
+    },
+    {
+      "slug": "claude-opus-5-fast",
+      "name": "Claude Opus 5 Fast",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 10,
+      "outputPricePerMillion": 50,
+      "contextWindow": 1000000,
+      "tier": "frontier",
+      "notes": "Low-latency variant of Opus 5 — 2x the price for guaranteed throughput and faster time-to-first-token. Right pick for production agentic loops where latency matters more than cost."
     },
     {
       "slug": "claude-opus-4-8",
@@ -25,7 +54,7 @@
       "outputPricePerMillion": 25,
       "contextWindow": 1000000,
       "tier": "frontier",
-      "notes": "Anthropic's current flagship — succeeded Opus 4.7. Same pricing as the prior generation. Best-in-class reasoning for the hardest agentic decisions."
+      "notes": "Previous flagship — superseded by Opus 5 at the same $5/$25 price. Still accessible via API for backwards compatibility. No reason to pick over Opus 5 unless you've pinned to this version."
     },
     {
       "slug": "claude-opus-4-8-fast",
@@ -35,7 +64,7 @@
       "outputPricePerMillion": 50,
       "contextWindow": 1000000,
       "tier": "frontier",
-      "notes": "Low-latency variant of Opus 4.8 — 2x the price for guaranteed throughput and faster time-to-first-token. Right pick for production agentic loops where latency matters."
+      "notes": "Low-latency variant of Opus 4.8. Superseded by Opus 5 Fast at the same price. Right pick only if you've pinned to Opus 4.8 for other reasons."
     },
     {
       "slug": "claude-opus-4-7",
@@ -48,14 +77,22 @@
       "notes": "Previous flagship — superseded by Opus 4.8 (2026-05-28) at the same price. Still accessible via API for backwards compatibility."
     },
     {
+      "slug": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 2,
+      "outputPricePerMillion": 10,
+      "contextWindow": 1000000,
+      "tier": "balanced"
+    },
+    {
       "slug": "claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "vendor": "Anthropic",
       "inputPricePerMillion": 3,
       "outputPricePerMillion": 15,
       "contextWindow": 1000000,
-      "tier": "balanced",
-      "notes": "The sweet spot. Handles ~90% of agent workflows at a fraction of Opus pricing."
+      "tier": "balanced"
     },
     {
       "slug": "claude-haiku-4-5",
