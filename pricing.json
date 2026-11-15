@@ -2,11 +2,20 @@
   "$schema": "./pricing.schema.json",
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
-  "verifiedDate": "2026-10-30",
+  "verifiedDate": "2026-11-15",
   "verificationCadence": "daily",
   "verificationMethod": "Pricing is verified daily against vendor sources. Small drift (under 25% on input and output) is auto-applied; larger changes are reviewed by a human editor before publication. Vendor pricing pages are the canonical source of truth.",
   "license": "CC-BY-4.0",
   "models": [
+    {
+      "slug": "claude-fable-5-2",
+      "name": "Claude Fable 5.2",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 8,
+      "outputPricePerMillion": 40,
+      "contextWindow": 1000000,
+      "tier": "frontier"
+    },
     {
       "slug": "claude-fable-5",
       "name": "Claude Fable 5",
@@ -27,6 +36,15 @@
       "notes": "Limited-availability frontier model (Glasswing program). Same pricing as Fable 5. Not generally accessible — access via Anthropic's Glasswing program."
     },
     {
+      "slug": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 4,
+      "outputPricePerMillion": 20,
+      "contextWindow": 1000000,
+      "tier": "frontier"
+    },
+    {
       "slug": "claude-opus-5",
       "name": "Claude Opus 5",
       "vendor": "Anthropic",
@@ -34,7 +52,7 @@
       "outputPricePerMillion": 25,
       "contextWindow": 1000000,
       "tier": "frontier",
-      "notes": "Anthropic's current flagship reasoning model. Same $5/$25 pricing as the entire Opus 4.x line — no price bump for the generation upgrade. Best pick for the hardest agentic decisions where reasoning quality compounds."
+      "notes": "Previous flagship. Superseded by Opus 5.5 (2026-09-22) at a lower $4/$20. Same $5/$25 pricing as the entire Opus 4.x line. No reason to pick it over Opus 5.5 unless you've pinned to this version."
     },
     {
       "slug": "claude-opus-5-fast",
@@ -77,13 +95,23 @@
       "notes": "Previous flagship — superseded by Opus 4.8 (2026-05-28) at the same price. Still accessible via API for backwards compatibility."
     },
     {
+      "slug": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 2,
+      "outputPricePerMillion": 10,
+      "contextWindow": 1000000,
+      "tier": "balanced"
+    },
+    {
       "slug": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "vendor": "Anthropic",
       "inputPricePerMillion": 2,
       "outputPricePerMillion": 10,
       "contextWindow": 1000000,
-      "tier": "balanced"
+      "tier": "balanced",
+      "notes": "Previous balanced-tier model. Superseded by Sonnet 5.5 (2026-09-28) at the same $2/$10. The $2/$10 rate launched as introductory pricing and was still Anthropic's listed price in November 2026. Still accessible via API for backwards compatibility."
     },
     {
       "slug": "claude-sonnet-4-6",
@@ -95,6 +123,15 @@
       "tier": "balanced"
     },
     {
+      "slug": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "vendor": "Anthropic",
+      "inputPricePerMillion": 0.1,
+      "outputPricePerMillion": 0.5,
+      "contextWindow": 1000000,
+      "tier": "value"
+    },
+    {
       "slug": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
       "vendor": "Anthropic",
@@ -102,7 +139,44 @@
       "outputPricePerMillion": 5,
       "contextWindow": 200000,
       "tier": "value",
-      "notes": "Fast and cheap. Best for high-volume classification and short replies."
+      "notes": "Previous small model. Superseded by Haiku 5.5 (2026-10-07) at a tenth of the price. Still accessible via API if you've pinned to it."
+    },
+    {
+      "slug": "gpt-6-astra",
+      "name": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "inputPricePerMillion": 10,
+      "outputPricePerMillion": 50,
+      "contextWindow": 1050000,
+      "tier": "frontier"
+    },
+    {
+      "slug": "gpt-6-1-sol",
+      "name": "GPT-6.1 Sol",
+      "vendor": "OpenAI",
+      "inputPricePerMillion": 2,
+      "outputPricePerMillion": 10,
+      "contextWindow": 1050000,
+      "tier": "balanced"
+    },
+    {
+      "slug": "gpt-6-1-terra",
+      "name": "GPT-6.1 Terra",
+      "vendor": "OpenAI",
+      "inputPricePerMillion": 1,
+      "outputPricePerMillion": 5,
+      "contextWindow": 1050000,
+      "tier": "balanced",
+      "notes": "The mid-priced GPT-6 model: half the cost of GPT-6.1 Sol at $1/$5. Worth testing first on any step where Sol feels like overkill."
+    },
+    {
+      "slug": "gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "vendor": "OpenAI",
+      "inputPricePerMillion": 0.1,
+      "outputPricePerMillion": 0.5,
+      "contextWindow": 1050000,
+      "tier": "value"
     },
     {
       "slug": "gpt-5",
@@ -112,7 +186,7 @@
       "outputPricePerMillion": 30,
       "contextWindow": 400000,
       "tier": "frontier",
-      "notes": "OpenAI's frontier line. Marketed for coding and professional work."
+      "notes": "OpenAI's frontier model before the GPT-6 line shipped in September 2026. At $5/$30 it now costs more than GPT-6.1 Sol at $2/$10. Marketed for coding and professional work."
     },
     {
       "slug": "gpt-5-4",
@@ -153,6 +227,15 @@
       "notes": "OpenAI's coding-specific model — powers the Codex CLI and ChatGPT cloud-runner agent. Tuned for software engineering tasks; competitive with Claude Sonnet on coding-only benchmarks at lower input cost."
     },
     {
+      "slug": "grok-4-7",
+      "name": "Grok 4.7",
+      "vendor": "xAI",
+      "inputPricePerMillion": 2,
+      "outputPricePerMillion": 6,
+      "contextWindow": 500000,
+      "tier": "frontier"
+    },
+    {
       "slug": "grok-4-5",
       "name": "Grok 4.5",
       "vendor": "xAI",
@@ -178,6 +261,42 @@
       "outputPricePerMillion": 2,
       "contextWindow": 256000,
       "tier": "value"
+    },
+    {
+      "slug": "gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "vendor": "Google",
+      "inputPricePerMillion": 2,
+      "outputPricePerMillion": 10,
+      "contextWindow": 1000000,
+      "tier": "frontier"
+    },
+    {
+      "slug": "gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "vendor": "Google",
+      "inputPricePerMillion": 2,
+      "outputPricePerMillion": 10,
+      "contextWindow": 1000000,
+      "tier": "balanced"
+    },
+    {
+      "slug": "gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "vendor": "Google",
+      "inputPricePerMillion": 1.5,
+      "outputPricePerMillion": 7.5,
+      "contextWindow": 1000000,
+      "tier": "balanced"
+    },
+    {
+      "slug": "gemini-3-8-flash",
+      "name": "Gemini 3.8 Flash",
+      "vendor": "Google",
+      "inputPricePerMillion": 0.825,
+      "outputPricePerMillion": 4.125,
+      "contextWindow": 1000000,
+      "tier": "balanced"
     },
     {
       "slug": "gemini-2-5-pro",
@@ -248,14 +367,31 @@
       "notes": "Open weights. The price shown reflects Together AI; other inference providers host the same weights at different rates."
     },
     {
+      "slug": "deepseek-v4-1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "vendor": "DeepSeek",
+      "inputPricePerMillion": 0.15,
+      "outputPricePerMillion": 0.6,
+      "contextWindow": 1000000,
+      "tier": "value"
+    },
+    {
+      "slug": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "vendor": "DeepSeek",
+      "inputPricePerMillion": 0.0507,
+      "outputPricePerMillion": 0.2028,
+      "contextWindow": 1000000,
+      "tier": "value"
+    },
+    {
       "slug": "deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
       "vendor": "DeepSeek",
-      "inputPricePerMillion": 0.0419,
-      "outputPricePerMillion": 0.0837,
-      "contextWindow": 128000,
-      "tier": "value",
-      "notes": "DeepSeek's value tier. Cache-hit pricing drops input to $0.0028/M on repeat queries."
+      "inputPricePerMillion": 0.15,
+      "outputPricePerMillion": 0.6,
+      "contextWindow": 1000000,
+      "tier": "value"
     },
     {
       "slug": "deepseek-v3-2",
@@ -268,11 +404,20 @@
       "notes": "DeepSeek's capable open-weight model. Extraordinary value — frontier-class performance at $0.25/M input. Top 3 on public model marketplaces this week."
     },
     {
+      "slug": "kimi-k3-1-pro",
+      "name": "Kimi K3.1 Pro",
+      "vendor": "Moonshot AI",
+      "inputPricePerMillion": 2,
+      "outputPricePerMillion": 10,
+      "contextWindow": 1000000,
+      "tier": "balanced"
+    },
+    {
       "slug": "kimi-k2-7-code",
       "name": "Kimi K2.7 Code",
       "vendor": "Moonshot AI",
-      "inputPricePerMillion": 0.6,
-      "outputPricePerMillion": 3.5,
+      "inputPricePerMillion": 0.95,
+      "outputPricePerMillion": 4,
       "contextWindow": 262000,
       "tier": "value"
     },
@@ -280,30 +425,47 @@
       "slug": "kimi-k2-6",
       "name": "Kimi K2.6",
       "vendor": "Moonshot AI",
-      "inputPricePerMillion": 0.4342,
-      "outputPricePerMillion": 1.828,
-      "contextWindow": 256000,
+      "inputPricePerMillion": 0.95,
+      "outputPricePerMillion": 4,
+      "contextWindow": 262000,
+      "tier": "balanced",
+      "notes": "Moonshot AI's general-purpose model from the K2 line; the K3 line (July 2026) is newer. Moonshot plans to retire the K2 series by the end of December 2026 and closed it to new accounts on October 31. Plan a move to Kimi K3.1 Pro or another vendor."
+    },
+    {
+      "slug": "glm-5-3",
+      "name": "GLM 5.3",
+      "vendor": "z.ai",
+      "inputPricePerMillion": 1.4,
+      "outputPricePerMillion": 4.4,
+      "contextWindow": 1000000,
       "tier": "balanced"
+    },
+    {
+      "slug": "glm-5-3-flash",
+      "name": "GLM 5.3 Flash",
+      "vendor": "z.ai",
+      "inputPricePerMillion": 0.15,
+      "outputPricePerMillion": 0.5,
+      "contextWindow": 1000000,
+      "tier": "value"
     },
     {
       "slug": "glm-5-2",
       "name": "GLM 5.2",
       "vendor": "z.ai",
-      "inputPricePerMillion": 0.62,
-      "outputPricePerMillion": 2.42,
+      "inputPricePerMillion": 1.4,
+      "outputPricePerMillion": 4.4,
       "contextWindow": 1048000,
-      "tier": "balanced",
-      "notes": "z.ai's current flagship — successor to GLM 5.1. ~50% price bump from 5.1 traded for 5x context (1M tokens) and stronger reasoning/tool-use benchmarks."
+      "tier": "balanced"
     },
     {
       "slug": "glm-5-1",
       "name": "GLM 5.1",
       "vendor": "z.ai",
-      "inputPricePerMillion": 0.966,
-      "outputPricePerMillion": 3.036,
+      "inputPricePerMillion": 1.4,
+      "outputPricePerMillion": 4.4,
       "contextWindow": 202000,
-      "tier": "balanced",
-      "notes": "Previous z.ai flagship — superseded by GLM 5.2 (2026-06-13). Still available; cheaper than 5.2 if 200k context is enough."
+      "tier": "balanced"
     },
     {
       "slug": "mistral-large",
@@ -314,6 +476,51 @@
       "contextWindow": 128000,
       "tier": "balanced",
       "notes": "European frontier model. Stronger data residency story than US providers — useful for EU compliance-heavy workflows."
+    },
+    {
+      "slug": "hy4",
+      "name": "Hy4",
+      "vendor": "Tencent",
+      "inputPricePerMillion": 0.417,
+      "outputPricePerMillion": 1.2505,
+      "contextWindow": 1000000,
+      "tier": "balanced"
+    },
+    {
+      "slug": "step-5-preview",
+      "name": "Step 5 Preview",
+      "vendor": "StepFun",
+      "inputPricePerMillion": 1,
+      "outputPricePerMillion": 2.7,
+      "contextWindow": 1000000,
+      "tier": "balanced"
+    },
+    {
+      "slug": "mimo-v2-6-flash",
+      "name": "MiMo-V2.6-Flash",
+      "vendor": "Xiaomi",
+      "inputPricePerMillion": 0.14,
+      "outputPricePerMillion": 0.28,
+      "contextWindow": 1050000,
+      "tier": "value"
+    },
+    {
+      "slug": "minimax-m3-1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "vendor": "MiniMax",
+      "inputPricePerMillion": 0.075,
+      "outputPricePerMillion": 0.3,
+      "contextWindow": 1000000,
+      "tier": "value"
+    },
+    {
+      "slug": "qwen3-8-max",
+      "name": "Qwen3.8 Max",
+      "vendor": "Alibaba",
+      "inputPricePerMillion": 2,
+      "outputPricePerMillion": 6,
+      "contextWindow": 1000000,
+      "tier": "frontier"
     }
   ]
 }
