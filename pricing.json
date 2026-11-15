@@ -81,8 +81,7 @@
       "inputPricePerMillion": 10,
       "outputPricePerMillion": 50,
       "contextWindow": 1000000,
-      "tier": "frontier",
-      "notes": "Low-latency variant of Opus 4.8. Superseded by Opus 5 Fast at the same price. Right pick only if you've pinned to Opus 4.8 for other reasons."
+      "tier": "frontier"
     },
     {
       "slug": "claude-opus-4-7",
@@ -468,14 +467,22 @@
       "tier": "balanced"
     },
     {
+      "slug": "mistral-large-4",
+      "name": "Mistral Large 4",
+      "vendor": "Mistral",
+      "inputPricePerMillion": 0.7,
+      "outputPricePerMillion": 2.1,
+      "contextWindow": 1000000,
+      "tier": "balanced"
+    },
+    {
       "slug": "mistral-large",
       "name": "Mistral Large 2.1",
       "vendor": "Mistral",
       "inputPricePerMillion": 2,
       "outputPricePerMillion": 6,
       "contextWindow": 128000,
-      "tier": "balanced",
-      "notes": "European frontier model. Stronger data residency story than US providers — useful for EU compliance-heavy workflows."
+      "tier": "balanced"
     },
     {
       "slug": "hy4",
@@ -494,6 +501,16 @@
       "outputPricePerMillion": 2.7,
       "contextWindow": 1000000,
       "tier": "balanced"
+    },
+    {
+      "slug": "mimo-v2-6-pro",
+      "name": "MiMo-V2.6-Pro",
+      "vendor": "Xiaomi",
+      "inputPricePerMillion": 0.435,
+      "outputPricePerMillion": 0.87,
+      "contextWindow": 1000000,
+      "tier": "balanced",
+      "notes": "Xiaomi's top general model at $0.435/$0.87 with a 1M context. About 3x the price of MiMo-V2.6-Flash. Within 5% of Tencent Hy4 on input and 30% cheaper on output. Cache hits drop input to $0.0036/M. Worth testing for high-volume agent steps where a $2/$10 model is overkill."
     },
     {
       "slug": "mimo-v2-6-flash",
@@ -521,6 +538,15 @@
       "outputPricePerMillion": 6,
       "contextWindow": 1000000,
       "tier": "frontier"
+    },
+    {
+      "slug": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "vendor": "Alibaba",
+      "inputPricePerMillion": 0.15,
+      "outputPricePerMillion": 0.47,
+      "contextWindow": 1000000,
+      "tier": "value"
     }
   ]
 }
